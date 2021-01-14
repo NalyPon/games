@@ -32,7 +32,7 @@ let buttonLength = $button.length;
 
 // クイズの問題分、選択肢を定義
 const setupQuiz = () => {
-  document.getElementById('js-question').textContent = quiz[quizIndex].question;
+  document.getElementById('js-question').textContent = 'Q' + (quizIndex + 1) + '：' + quiz[quizIndex].question;
   let buttonIndex = 0;
   while (buttonIndex < buttonLength) {
     $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
@@ -57,7 +57,7 @@ const clickHandler = (e) => {
     setupQuiz();
   } else {
     window.alert('終了!あなたの正解数は' + score + '/' + quizLength + 'です！');
-    location.replace('https://nalypon.github.io/games/html/index.html');
+    location.replace('../html/index.html');
   }
 };
 
