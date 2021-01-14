@@ -1,25 +1,25 @@
 const quiz = [
   {
-    question: '地球で一番高い山は？',
+    question: 'Instagramの名前の由来知ってる？',
     answers: [
-      'K2',
-      'エベレスト',
+      'instant telegram',
+      'は？',
     ],
-    correct: 'エベレスト'
+    correct: 'instant telegram'
   }, {
-    question: 'アドレス長が128ビットなのは？',
+    question: 'なりこーって天才だよね？',
     answers: [
-      'IPv4',
-      'IPv6',
+      'それな。',
+      '大丈夫そ？',
     ],
-    correct: 'IPv6'
+    correct: 'それな。'
   }, {
-    question: '沼田の長所は？',
+    question: 'なりこーについてどう思う？',
     answers: [
-      '左ケツ',
-      '右ケツ',
+      'くそ',
+      'どう見ても世界一の男',
     ],
-    correct: '左ケツ'
+    correct: 'どう見ても世界一の男'
   }
 ];
 
