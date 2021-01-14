@@ -1,31 +1,25 @@
 const quiz = [
   {
-    question: 'ゲーム市場、最も売れたゲーム機は次の内どれ？',
-    answers: [
-      'スーパーファミコン',
-      'PlayStation',
-      'Nintendo Switch',
-      'Nintendo DS'
-    ],
-    correct: 'Nintendo DS'
-  }, {
     question: '地球で一番高い山は？',
     answers: [
-      '富士山',
       'K2',
       'エベレスト',
-      'キリマンジャロ'
     ],
     correct: 'エベレスト'
   }, {
-    question: 'OSI参照モデルのL4って何？',
+    question: 'アドレス長が128ビットなのは？',
     answers: [
-      '物理層',
-      'リンク層',
-      'ネットワーク層',
-      'トランスポート層'
+      'IPv4',
+      'IPv6',
     ],
-    correct: 'トランスポート層'
+    correct: 'IPv6'
+  }, {
+    question: '沼田の長所は？',
+    answers: [
+      '左ケツ',
+      '右ケツ',
+    ],
+    correct: '左ケツ'
   }
 ];
 
