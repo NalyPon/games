@@ -57,7 +57,7 @@ const clickHandler = (e) => {
     setupQuiz();
   } else {
     window.alert('終了!あなたの正解数は' + score + '/' + quizLength + 'です！');
-    location.replace('./index.html');
+    location.replace('https://nalypon.github.io/games/html/index.html');
   }
 };
 
