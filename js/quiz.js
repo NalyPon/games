@@ -1,25 +1,23 @@
 const quiz = [
   {
-    question: 'Instagramの名前の由来知ってる？',
+    question: '『枕草子』で「冬は〇〇〇」。〇に入る言葉は？',
     answers: [
-      'instant telegram',
-      'は？',
+      'あけぼの',
+      '夜',
+      '夕暮れ',
+      'つとめて'
     ],
-    correct: 'instant telegram'
-  }, {
-    question: 'なりこーって天才だよね？',
+    correct: 'つとめて'
+  },
+  {
+    question: 'アメリカの中央情報局を指す「CIA」の真ん中の「I」は何の略？',
     answers: [
-      'それな。',
-      '大丈夫そ？',
+      'infomation',
+      'inteligence',
+      'integration',
+      'internatinal'
     ],
-    correct: 'それな。'
-  }, {
-    question: 'なりこーについてどう思う？',
-    answers: [
-      'くそ',
-      'どう見ても世界一の男',
-    ],
-    correct: 'どう見ても世界一の男'
+    correct: 'inteligence'
   }
 ];
 
@@ -56,9 +54,10 @@ const clickHandler = (e) => {
   if (quizIndex < quizLength) {
     setupQuiz();
   } else {
-    document.getElementById("js-result").textContent = '終了!あなたの正解数は' + score + '/' + quizLength + 'です！';
-    // document.getElementById('js-result').textContent = '終了';
+    // document.getElementById("js-result").textContent = '終了!あなたの正解数は' + score + '/' + quizLength + 'です！';
     location.replace('../html/quizResult.html');
+
+    // document.getElementById('js-result').textContent = '終了';
   }
 };
 
