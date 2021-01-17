@@ -56,8 +56,9 @@ const clickHandler = (e) => {
   if (quizIndex < quizLength) {
     setupQuiz();
   } else {
-    window.alert('終了!あなたの正解数は' + score + '/' + quizLength + 'です！');
-    location.replace('../html/index.html');
+    document.getElementById("js-result").textContent = '終了!あなたの正解数は' + score + '/' + quizLength + 'です！';
+    // document.getElementById('js-result').textContent = '終了';
+    location.replace('../html/quizResult.html');
   }
 };
 
