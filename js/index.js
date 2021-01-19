@@ -7,5 +7,11 @@ document.getElementById('Quiz')
 // Don't push!!!! cliclkEvent
 document.getElementById('dammy')
     .addEventListener('click', () => {
-        window.location.replace('./dammy.html');
+        if (confirm('本当によろしいですか？')) {
+            if (confirm('やめといたほうがいいですよ？')) {
+                if (confirm('最終警告です。')) {
+                    window.location.replace('./dammy.html');
+                }
+            }
+        }
     });
