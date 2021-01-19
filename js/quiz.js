@@ -19,7 +19,7 @@ const quiz = [
         ],
         correct: 'intelligence'
     }, {
-        question: '世界に2番目に高い山は??',
+        question: '世界で2番目に高い山は??',
         answers: [
             'エベレスト',
             'K2',
