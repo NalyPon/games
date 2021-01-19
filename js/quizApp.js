@@ -26,27 +26,25 @@ setupQuiz();
 
 // ボタンイベント
 clickHandler = (e) => {
-  if (confirm('Final answer???')) {
-    if (quiz[quizIndex].correct === e.target.textContent) {
-      window.alert('正解！');
-      score++;
-    } else {
-      window.alert('違うよ？www大丈夫そ？www');
-    }
+  if (quiz[quizIndex].correct === e.target.textContent) {
+    window.alert('正解！');
+    score++;
+  } else {
+    window.alert('残念。正解は「' + quiz[quizIndex].correct + '」');
+  }
 
-    quizIndex++;
+  quizIndex++;
 
-    if (quizIndex < quizLength) {
-      setupQuiz();
-    } else {
-      // quizAreaを非表示にする
-      $quizArea.style.display = 'none';
-      // resultAreaを表示する
-      $resultArea.style.display = initResultArea;
-      // 結果を表示する
-      document.getElementById('js-result').textContent
-        = 'あなたの正解数は' + score + ' / ' + quizLength + 'です！';
-    }
+  if (quizIndex < quizLength) {
+    setupQuiz();
+  } else {
+    // quizAreaを非表示にする
+    $quizArea.style.display = 'none';
+    // resultAreaを表示する
+    $resultArea.style.display = initResultArea;
+    // 結果を表示する
+    document.getElementById('js-result').textContent
+      = 'あなたの正解数は' + score + ' / ' + quizLength + 'です！';
   }
 };
 
