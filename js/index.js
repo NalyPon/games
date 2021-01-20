@@ -1,7 +1,13 @@
 // Quiz clickEvent
-document.getElementById('Quiz')
+document.getElementById('quiz')
     .addEventListener('click', () => {
         window.location.replace('./quiz.html');
+    });
+
+// Explosion clickEvent
+document.getElementById('bomb')
+    .addEventListener('click', () => {
+        window.location.replace('./bomb.html');
     });
 
 // Don't push!!!! cliclkEvent

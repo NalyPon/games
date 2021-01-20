@@ -56,7 +56,7 @@ while (handleIndex < buttonLength) {
 };
 
 // Retire clickEvent
-document.getElementById('Retire')
+document.getElementById('retire')
   .addEventListener('click', () => {
     if (confirm('終了しますか??')) {
       window.location.replace('./index.html');
@@ -64,10 +64,10 @@ document.getElementById('Retire')
   });
 
 // Retry clickEvent
-document.getElementById('Retry')
+document.getElementById('retry')
   .addEventListener('click', () => {
-    // quizAreaを表示する
-    $quizArea.style.display = initQuizArea;
+    // bombAreaを表示する
+    $bombArea.style.display = initBombArea;
     // resultAreaを非表示にする
     $resultArea.style.display = 'none';
     /* 初期化 */
@@ -78,7 +78,7 @@ document.getElementById('Retry')
   });
 
 // Menu clickEvent
-document.getElementById('Menu')
+document.getElementById('menu')
   .addEventListener('click', () => {
     window.location.replace('./index.html');
   });
