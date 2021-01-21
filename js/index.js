@@ -13,9 +13,9 @@ document.getElementById('bomb')
 // Don't push!!!! cliclkEvent
 document.getElementById('dammy')
     .addEventListener('click', () => {
-        if (confirm('本当によろしいですか？')) {
-            if (confirm('やめといたほうがいいですよ？')) {
-                if (confirm('最終警告です。')) {
+        if (confirm('Really?')) {
+            if (confirm('You should stop!')) {
+                if (confirm('Final warning')) {
                     window.location.replace('./dammy.html');
                 }
             }

@@ -63,11 +63,11 @@ document.getElementById('retire')
     }
   });
 
-// Retry clickEvent
-document.getElementById('retry')
+// Replay clickEvent
+document.getElementById('replay')
   .addEventListener('click', () => {
-    // bombAreaを表示する
-    $bombArea.style.display = initBombArea;
+    // quizAreaを表示する
+    $quizArea.style.display = initQuizArea;
     // resultAreaを非表示にする
     $resultArea.style.display = 'none';
     /* 初期化 */
