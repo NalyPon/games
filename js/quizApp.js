@@ -26,12 +26,14 @@ setupQuiz();
 
 // ボタンイベント
 clickHandler = (e) => {
+  let resultMessage = null;
   if (quiz[quizIndex].correct === e.target.textContent) {
-    window.alert('正解！');
+    resultMessage = '正解！';
     score++;
   } else {
-    window.alert('残念。正解は「' + quiz[quizIndex].correct + '」');
+    resultMessage = '残念！正解は「' + quiz[quizIndex].correct + '」'
   }
+  window.alert(resultMessage + '\n\n解説：' + quiz[quizIndex].explanation);
 
   quizIndex++;
 
@@ -48,14 +50,14 @@ clickHandler = (e) => {
   }
 };
 
-// Choices clickEvent
+// Choices button Event
 handleIndex = 0;
 while (handleIndex < buttonLength) {
   $button[handleIndex].addEventListener('click', clickHandler);
   handleIndex++;
 };
 
-// Retire clickEvent
+// Retire button Event
 document.getElementById('retire')
   .addEventListener('click', () => {
     if (confirm('終了しますか??')) {
@@ -63,7 +65,7 @@ document.getElementById('retire')
     }
   });
 
-// Replay clickEvent
+// Replay button Event
 document.getElementById('replay')
   .addEventListener('click', () => {
     // quizAreaを表示する
@@ -75,10 +77,4 @@ document.getElementById('replay')
     score = 0;
 
     setupQuiz();
-  });
-
-// Menu clickEvent
-document.getElementById('menu')
-  .addEventListener('click', () => {
-    window.location.replace('./index.html');
   });

@@ -7,7 +7,8 @@ const quiz = [
             '夕暮れ',
             'つとめて'
         ],
-        correct: 'つとめて'
+        correct: 'つとめて',
+        explanation: '「春はあけぼの」「夏は夜」「秋は夕暮れ」「冬はつとめて」'
     },
     {
         question: 'アメリカの中央情報局を指す「CIA」の真ん中の「I」は何の略??',
@@ -17,16 +18,18 @@ const quiz = [
             'integration',
             'internatinal'
         ],
-        correct: 'intelligence'
+        correct: 'intelligence',
+        explanation: 'CIAは「Central Intelligence Argency」の略。'
     }, {
-        question: '世界で2番目に高い山は??',
+        question: '世界で1番高い建造物は??',
         answers: [
-            'エベレスト',
-            'K2',
-            'カンチェンジュンガ',
-            'ローツェ'
+            'エッフェル塔',
+            '東京スカイツリー',
+            'ブルジュ・ハリファ',
+            'サグラダ・ファミリア'
         ],
-        correct: 'K2'
+        correct: 'ブルジュ・ハリファ',
+        explanation: 'ドバイにあるビル。高さは828m。'
     }, {
         question: '次のうち、仲間外れの国はどこ??',
         answers: [
@@ -35,6 +38,7 @@ const quiz = [
             'アルバニア',
             'エストニア'
         ],
-        correct: 'アルバニア'
+        correct: 'アルバニア',
+        explanation: 'バルト三国「エストニア、ラトビア、リトアニア」'
     },
 ];

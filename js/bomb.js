@@ -1,3 +1,4 @@
+/** 定数を定義 */
 const $manualArea = document.getElementById('manualArea');
 const initManualArea = $manualArea.style.display;
 const $bombArea = document.getElementById('bombArea');
@@ -87,7 +88,7 @@ for (handleIndex = 0; handleIndex < buttonLength; handleIndex++) {
     $button[handleIndex].addEventListener('click', clickHandler);
 };
 
-// Replay clickEvent
+// Replay button Event
 document.getElementById('replay')
     .addEventListener('click', () => {
         // bombAreaを表示する
@@ -115,10 +116,4 @@ document.getElementById('replay')
         // 爆弾をランダムに設定
         bomb = getRandomInt(buttonLength) + 1;
         console.log('ハズレ:' + bomb);
-    });
-
-// Menu clickEvent
-document.getElementById('menu')
-    .addEventListener('click', () => {
-        window.location.replace('./index.html');
     });
