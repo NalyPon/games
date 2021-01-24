@@ -11,7 +11,7 @@ const initSuccessArea = $successArea.style.display;
 const edgeLength = 4;
 const divStartTag = '<div class="mt-3 d-flex justify-content-center">';
 const divEndTag = '</div>';
-const buttonTag = '<button type="button" class="mx-2 btn btn-warning text-warning" style="width: 50px; height: 50px"></button>';
+const buttonTag = '<button type="button" class="mx-2 btn btn-warning text-warning" style="width: 70px; height: 70px"></button>';
 
 let success = true;
 
