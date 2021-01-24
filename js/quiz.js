@@ -40,5 +40,25 @@ const quiz = [
         ],
         correct: 'アルバニア',
         explanation: 'バルト三国「エストニア、ラトビア、リトアニア」'
+    }, {
+        question: '次のうち、仲間外れはどれ??',
+        answers: [
+            '月',
+            '火',
+            '水',
+            '木'
+        ],
+        correct: '月',
+        explanation: '他は惑星の名前'
+    }, {
+        question: 'NTTってどういう意味？',
+        answers: [
+            '日本電信電話',
+            '日本電気電話',
+            '日本電子電話',
+            '日本電報電話'
+        ],
+        correct: '日本電信電話',
+        explanation: 'NTT : Nippon Telegraph and Telephone Corporation'
     },
 ];
