@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta pbroperty="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <div
+      class="d-block p-2 bg-primary text-white d-flex justify-content-center"
+    >
+      絶対に負けないサザエさん
+    </div>
+    <div id="sazaeStandBy">
+      <div class="mt-4 d-flex justify-content-center">
+        <img src="../image/sazae_standBy.jpg" />
+      </div>
+    </div>
+    <div id="sazaeRock">
+      <div class="mt-4 d-flex justify-content-center">
+        <img src="../image/sazae_rock.jpg" />
+      </div>
+    </div>
+    <div id="sazaeScissors">
+      <div class="mt-4 d-flex justify-content-center">
+        <img src="../image/sazae_scissors.jpg" />
+      </div>
+    </div>
+    <div id="sazaePaper">
+      <div class="mt-4 d-flex justify-content-center">
+        <img src="../image/sazae_paper.jpg" />
+      </div>
+    </div>
+    <div id="messageArea" class="mt-4 d-flex justify-content-center"></div>
+    <div class="mt-4 d-flex justify-content-center">
+      <button
+        type="button"
+        class="btn btn-dark text-white"
+        style="width: 80px"
+        id="rock"
+      >
+        Rock
+      </button>
+      <button
+        type="button"
+        class="ms-2 btn btn-dark text-white"
+        style="width: 80px"
+        id="scissors"
+      >
+        Scissors
+      </button>
+      <button
+        type="button"
+        class="ms-2 btn btn-dark text-white"
+        style="width: 80px"
+        id="paper"
+      >
+        Paper
+      </button>
+    </div>
+    <div class="mt-4 d-flex justify-content-center">
+      <button
+        type="button"
+        class="btn btn-primary text-white"
+        style="width: 70px"
+        onclick="initializeDisplay()"
+      >
+        Replay
+      </button>
+      <button
+        type="button"
+        class="ms-3 btn btn-info text-white"
+        style="width: 70px"
+        onclick="window.location.replace('./index.html')"
+      >
+        Menu
+      </button>
+    </div>
+    <script src="../js/janken.js"></script>
+  </body>
+</html>
