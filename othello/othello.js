@@ -69,6 +69,9 @@ function initializeBoard() {
     // ターンも初期化
     turn = 0;
     changeTurn();
+
+    // メッセージ挿入
+    document.getElementById("alertArea").textContent = "START!!";
 }
 
 // 盤面状況(配列)を実際の盤面へ反映させる処理

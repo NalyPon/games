@@ -11,7 +11,7 @@ const initSuccessArea = $successArea.style.display;
 const edgeLength = 4;
 const divStartTag = '<div class="mt-3 d-flex justify-content-center">';
 const divEndTag = '</div>';
-const buttonTag = '<button type="button" class="mx-2 btn btn-warning text-warning" style="width: 70px; height: 70px"></button>';
+const buttonTag = '<button type="button" class="mx-2 btn btn-warning text-warning" style="width: 70px; height: 70px; transition: 0.3s;"></button>';
 
 let success = true;
 
@@ -33,13 +33,6 @@ const $button = document.getElementById('bombArea').
     getElementsByTagName('button');
 const buttonLength = $button.length;
 
-/**
- * integer乱数を生成
- */
-getRandomInt = (max) => {
-    return Math.floor(Math.random() * Math.floor(max));
-};
-
 // successAreaを非表示にする
 $successArea.style.display = 'none';
 // failureAreaを非表示にする
@@ -48,8 +41,24 @@ $failureArea.style.display = 'none';
 let bomb = getRandomInt(buttonLength) + 1;
 console.log('ハズレ:' + bomb);
 
-// ボタンイベント
-clickHandler = (e) => {
+// bomb click
+for (handleIndex = 0; handleIndex < buttonLength; handleIndex++) {
+    $button[handleIndex].textContent = handleIndex + 1;
+    $button[handleIndex].addEventListener('click', clickHandler);
+};
+
+/**
+ * integer乱数を生成
+ */
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+
+/**
+ * ボタンイベント
+ * @param {*} e 
+ */
+function clickHandler(e) {
     if (bomb == Number(e.target.textContent)) {
         // ハズレボタンを赤にする
         $button[bomb - 1].classList.replace('btn-warning', 'btn-danger');
@@ -80,40 +89,4 @@ clickHandler = (e) => {
             success = true;
         }
     }
-};
-
-// bomb click
-for (handleIndex = 0; handleIndex < buttonLength; handleIndex++) {
-    $button[handleIndex].textContent = handleIndex + 1;
-    $button[handleIndex].addEventListener('click', clickHandler);
-};
-
-// Replay button Event
-document.getElementById('replay')
-    .addEventListener('click', () => {
-        // bombAreaを表示する
-        $bombArea.style.display = initBombArea;
-        if (success) {
-            // successAreaを非表示にする
-            $successArea.style.display = 'none';
-            // ハズレボタンを黄色に戻す
-            $button[bomb - 1].classList.replace('btn-success', 'btn-warning',);
-            $button[bomb - 1].classList.replace('text-success', 'text-warning');
-        } else {
-            // failureAreaを非表示にする
-            $failureArea.style.display = 'none';
-            // ハズレボタンを黄色に戻す
-            $button[bomb - 1].classList.replace('btn-danger', 'btn-warning',);
-            $button[bomb - 1].classList.replace('text-danger', 'text-warning');
-        }
-        // ボタンを全て表示し活性にする
-        for (buttonIndex = 0; buttonIndex < buttonLength; buttonIndex++) {
-            $button[buttonIndex].style.visibility = "visible";
-            $button[buttonIndex].removeAttribute("disabled");
-        }
-        // 残りのボタンの数を初期化
-        remaingButtons = edgeLength * edgeLength;
-        // 爆弾をランダムに設定
-        bomb = getRandomInt(buttonLength) + 1;
-        console.log('ハズレ:' + bomb);
-    });
+}

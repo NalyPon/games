@@ -14,30 +14,17 @@ const $rockButton = document.getElementById('rock');
 const $scissorsButton = document.getElementById('scissors');
 const $paperButton = document.getElementById('paper');
 
-// 画面を初期化
-initializeDisplay();
 /* ボタンイベントを定義 */
 $rockButton.addEventListener('click', rockEvent);
 $scissorsButton.addEventListener('click', scissorsEvent);
 $paperButton.addEventListener('click', paperEvent);
 
-/**
- * 画面を初期化する
- */
-function initializeDisplay() {
-    // サザエ初期画面を表示する
-    $sazaeStandBy.style.display = initSazaeStandBy;
-    // サザエを非表示にする
-    $sazaeRock.style.display = 'none';
-    $sazaeScissors.style.display = 'none';
-    $sazaePaper.style.display = 'none';
-    // じゃんけんボタンを活性にする
-    $rockButton.removeAttribute('disabled');
-    $scissorsButton.removeAttribute('disabled');
-    $paperButton.removeAttribute('disabled');
-    // メッセージを挿入
-    $messageArea.innerHTML = '来週もまた観てくださいね～♪じゃんけん～？'
-}
+// サザエを非表示にする
+$sazaeRock.style.display = 'none';
+$sazaeScissors.style.display = 'none';
+$sazaePaper.style.display = 'none';
+// メッセージを挿入
+$messageArea.innerHTML = '来週もまた観てくださいね～♪じゃんけん～？'
 
 /**
  * Rock button event

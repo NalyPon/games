@@ -13,8 +13,20 @@ const initResultArea = $resultArea.style.display;
 // resultAreaを非表示にする
 $resultArea.style.display = 'none';
 
-// クイズの問題分、選択肢を定義
-setupQuiz = () => {
+// 問題文と選択肢を表示
+setupQuiz();
+
+// 選択肢ボタンのイベントを定義
+handleIndex = 0;
+while (handleIndex < buttonLength) {
+  $button[handleIndex].addEventListener('click', clickHandler);
+  handleIndex++;
+};
+
+/**
+ * 問題文、選択肢を画面に表示
+ */
+function setupQuiz() {
   document.getElementById('js-question').textContent = 'Q' + (quizIndex + 1) + '： ' + quiz[quizIndex].question;
   let buttonIndex = 0;
   while (buttonIndex < buttonLength) {
@@ -22,10 +34,9 @@ setupQuiz = () => {
     buttonIndex++;
   }
 };
-setupQuiz();
 
-// ボタンイベント
-clickHandler = (e) => {
+// 選択肢ボタンイベント
+function clickHandler(e) {
   let resultMessage = null;
   if (quiz[quizIndex].correct === e.target.textContent) {
     resultMessage = '正解！';
@@ -50,31 +61,9 @@ clickHandler = (e) => {
   }
 };
 
-// Choices button Event
-handleIndex = 0;
-while (handleIndex < buttonLength) {
-  $button[handleIndex].addEventListener('click', clickHandler);
-  handleIndex++;
-};
-
 // Retire button Event
-document.getElementById('retire')
-  .addEventListener('click', () => {
-    if (confirm('終了しますか??')) {
-      window.location.replace('./index.html');
-    }
-  });
-
-// Replay button Event
-document.getElementById('replay')
-  .addEventListener('click', () => {
-    // quizAreaを表示する
-    $quizArea.style.display = initQuizArea;
-    // resultAreaを非表示にする
-    $resultArea.style.display = 'none';
-    /* 初期化 */
-    quizIndex = 0;
-    score = 0;
-
-    setupQuiz();
-  });
+function retireEvent() {
+  if (confirm('終了しますか??')) {
+    window.location.replace('../index.html');
+  }
+}
