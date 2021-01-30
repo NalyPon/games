@@ -73,7 +73,7 @@ section h2 {
   border: 1px solid #777;
   border-radius: 5px;
   padding: 10px 15px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.8;
   height: 150px;
   overflow: auto;
@@ -82,9 +82,9 @@ section h2 {
 }
 
 .attack {
-  margin: 50px auto 0;
+  margin: 20px auto 0;
   width: 200px;
-  height: 40px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +92,7 @@ section h2 {
   color: #fff;
   border: 0;
   outline: none;
-  font-size: 20px;
+  font-size: 50px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -198,7 +198,7 @@ section h2 {
 
 .escape {
   margin: 50px auto 0;
-  width: 200px;
+  width: 150px;
   height: 40px;
   display: flex;
   justify-content: center;
