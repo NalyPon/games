@@ -24,7 +24,7 @@ $sazaeRock.style.display = 'none';
 $sazaeScissors.style.display = 'none';
 $sazaePaper.style.display = 'none';
 // メッセージを挿入
-$messageArea.innerHTML = '来週もまた観てくださいね～♪じゃんけん～？'
+$messageArea.innerHTML = 'じゃんけん～？'
 
 /**
  * Rock button event
@@ -64,5 +64,5 @@ function displayPlayerLose() {
     $scissorsButton.setAttribute('disabled', true);
     $paperButton.setAttribute('disabled', true);
     // メッセージを挿入
-    $messageArea.innerHTML = 'ポン。お前の負け。何で負けたか明日までに考えてこい？'
+    $messageArea.innerHTML = 'ポン'
 }
