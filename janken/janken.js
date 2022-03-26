@@ -49,7 +49,7 @@ function getRandomInt(max) {
 }
 
 /**
- * じぇんけんイベント
+ * じゃんけんイベント
  * @param {number} playerHand プレイヤーの手札 
  */
 function janken(playerHand) {
