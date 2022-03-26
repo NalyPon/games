@@ -12,19 +12,22 @@ const enemiesData = [
         name: "スライム",
         hp: 50,
         attack: 4,
-        defence: 1
+        defence: 1,
+        image: "../image/slime.jpg"
     },
     {
         name: "ゴブリン",
         hp: 60,
         attack: 5,
-        defence: 1
+        defence: 1,
+        image: "../image/goblins.jpg"
     },
     {
         name: "サイクロプス",
         hp: 80,
         attack: 6,
-        defence: 2
+        defence: 2,
+        image: "../image/cyclopes.jpg"
     }
 ];
 
@@ -57,6 +60,7 @@ insertText("currentPlayerHp", playerData.hp);
 insertText("maxPlayerHp", playerData.maxHp);
 
 /* 敵の情報を表示 */
+insertEnemyImage();
 insertText("enemyName", enemyData.name);
 insertText("currentEnemyHp", enemyData.hp);
 insertText("maxEnemyHp", enemyData.maxHp);
@@ -152,12 +156,11 @@ function nextButtonEvent() {
     // 次の敵へ
     enemyData = enemiesData[++enemyIndex];
     /* 敵の情報を表示 */
+    insertEnemyImage();
     insertText("enemyName", enemyData.name);
     insertText("currentEnemyHp", enemyData.hp);
     insertText("maxEnemyHp", enemyData.maxHp);
     document.getElementById("currentEnemyHpGaugeValue").style.width = "100%";
-
-
     document.getElementById('mask').classList.remove('active');
     document.getElementById('modal').classList.remove('active');
     document.getElementById('attack').classList.remove("deactive");
@@ -188,6 +191,16 @@ function damageCaluculation(attack, defence) {
  */
 function insertText(id, text) {
     document.getElementById(id).textContent = text;
+}
+
+/**
+ * HTMLのidに画像を挿入する
+ */
+function insertEnemyImage() {
+    let enemyImage = document.getElementById("enemyImage");
+    enemyImage.setAttribute("src", enemyData.image); // 画像パスを指定
+    enemyImage.setAttribute("alt", enemyData.name); // 代替テキスト
+    enemyImage.setAttribute("style", "display: block; margin: auto;width: 50vw");
 }
 
 /**
