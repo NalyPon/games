@@ -13,8 +13,11 @@ const divStartTag = '<div class="mt-3 d-flex justify-content-center">';
 const divEndTag = '</div>';
 const buttonTag = '<button type="button" class="mx-2 btn btn-warning text-warning" style="width: 70px; height: 70px; transition: 0.3s;"></button>';
 
-let success = true;
+const push_audio = new Audio("../audio/ポピッ.mp3");
+const success_audio = new Audio("../audio/Success.mp3");
+const lose_audio = new Audio("../audio/Scream.mp3");
 
+let success = true;
 // 残りのボタンの数
 let remaingButtons = edgeLength * edgeLength;
 
@@ -60,6 +63,9 @@ function getRandomInt(max) {
  */
 function clickHandler(e) {
     if (bomb == Number(e.target.textContent)) {
+        // ボタン押下音を再生
+        lose_audio.currentTime = 0;
+        lose_audio.play();
         // ハズレボタンを赤にする
         $button[bomb - 1].classList.replace('btn-warning', 'btn-danger');
         $button[bomb - 1].classList.replace('text-warning', 'text-danger');
@@ -76,8 +82,12 @@ function clickHandler(e) {
         // ボタンを非表示にする
         e.target.style.visibility = 'hidden';
         remaingButtons--;
+        console.log('残りボタン:' + remaingButtons);
         // ボタンが残り1つならばクリア
         if (remaingButtons == 1) {
+            // ボタン押下音を再生
+            success_audio.currentTime = 0;
+            success_audio.play();
             // ハズレボタンを緑にする
             $button[bomb - 1].classList.replace('btn-warning', 'btn-success');
             $button[bomb - 1].classList.replace('text-warning', 'text-success');
@@ -87,6 +97,10 @@ function clickHandler(e) {
             $successArea.style.display = initSuccessArea;
             // 成功フラグをtrueに
             success = true;
+        } else {
+            // ボタン押下音を再生
+            push_audio.currentTime = 0;
+            push_audio.play();
         }
     }
 }
